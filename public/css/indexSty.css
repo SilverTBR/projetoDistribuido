@@ -1,0 +1,44 @@
+.text-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.login-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 25%;
+}
+
+.login-input{
+    width: 98%;
+    margin-bottom: 10px;
+}
+
+input::placeholder{
+    color: #8f9ca7;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.a-cadastro{
+    color: #cbd4dc;
+}
+
+.a-cadastro:hover{
+    color: white;
+}
+
+.opcoes-link{
+    margin-top: 10px;
+}
+
+.aviso{
+    width: 40%;
+    margin-top: 10px;
+    margin-bottom: 0;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GameLog - Analise</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <link href="/css/geral.css" rel="stylesheet">
+    <link href="/css/analiseSty.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bdedc57966.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+    <header>
+        <a class="header-logo" href="/main">
+            <img src="/img/logo.png" class="logo">
+            <span class="header-title">GameLog</span>
+        </a>
+        <ul class="header-right">
+            <li><a href="/main/perfil" id="perfil"><i class="fa-solid fa-user" style="margin-right: 5px;"></i></a></li>
+            <li><a href="/main/jogos" id="jogos"><i class="fa-solid fa-plus" style="margin-right: 5px;"></i>Adicionar jogo</a></li>
+            <li><a href="/main/analise" id="jogos"><i class="fa-solid fa-pen" style="margin-right: 5px;"></i>Adcionar analise</a></li>            
+            <li><a href="/main/grafico" id="jogos"><i class="fa-solid fa-chart-simple" style="margin-right: 5px;"></i>Grafico</a></li>            
+            <li><a class="sair" href="/" id="jogos"><i class="fa-solid fa-right-from-bracket"></i>Sair</a></li>            
+        </ul>
+
+    </header>
+    <main>
+        <div class="main-area">
+            <div class="aviso" id="aviso">
+                <p class="aviso-text" id="aviso-text">Dados da analise estão invalidos! A analise deve ter mais de 10 caracteres!</p>
+            </div>
+            <h1 class="secao-titulo">Analise</h1>
+            <textarea rows="1" id="analise">{{analise.texto}}</textarea>
+            <div class="subarea">
+                {{^analise}}
+                <select id="dropMenu" class="select">
+                    <option value="" selected hidden>Selecione um jogo</option>
+                </select> 
+                {{/analise}}
+                {{#analise}}
+                <button id="excluir">Excluir</button>
+                {{/analise}}
+
+                <button id="salvar">Salvar</button>
+
+            </div>
+
+        </div>
+    </main>
+    <input id="id" style="display: none;" value="{{analise.id}}"/>
+    <footer>
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/sobre#tecnologias">Tecnologias</a></li>
+                <li><a href="/sobre#desenvolvedor">Desenvolvedores</a></li>
+                <li><a href="/sobre#contato">Contato</a></li>
+            </ul>
+            <span class="footer-infos">© GameLog 2023 • v0.10.0</span>
+        </div>
+    </footer>
+</body>
+{{^analise}}
+<script src="/javascript/control/analiseControl.js" type="module"></script>
+{{/analise}}
+{{#analise}}
+<script src="/javascript/control/editarAnaliseControl.js" type="module"></script>
+
+{{/analise}}
+</html>

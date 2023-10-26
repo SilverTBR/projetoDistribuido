@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GameLog - Jogos</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <link href="/css/geral.css" rel="stylesheet">
+    <link href="/css/jogosSty.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bdedc57966.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+    <header>
+        <a class="header-logo" href="/main">
+            <img src="/img/logo.png" class="logo">
+            <span class="header-title">GameLog</span>
+        </a>
+        <ul class="header-right" id = Cabecalho_superior>
+            <li><a href="/main/perfil" id="perfil"><i class="fa-solid fa-user" style="margin-right: 5px;"></i></a></li>
+            <li><a href="/main/jogos" id="jogos"><i class="fa-solid fa-plus" style="margin-right: 5px;"></i>Adicionar jogo</a></li>
+            <li><a href="/main/analise" id="jogos"><i class="fa-solid fa-pen" style="margin-right: 5px;"></i>Adcionar analise</a></li>            
+            <li><a href="/main/grafico" id="jogos"><i class="fa-solid fa-chart-simple" style="margin-right: 5px;"></i>Grafico</a></li>            
+            <li><a class="sair" href="/" id="jogos"><i class="fa-solid fa-right-from-bracket"></i>Sair</a></li>            
+        </ul>
+    </header>
+    <main>
+        <div class="main-area">
+            <div class="aviso" id="aviso">
+                <p class="aviso-text" id="aviso-text">Dados de cadastro invalidos!</p>
+            </div>
+            <h1 class="secao-titulo">Jogo</h1>
+            <label>Nome</label>
+            <input id="nome" value="{{jogo.nome}}" {{#jogo}}disabled class="disabled-input"{{/jogo}}/>
+            <div class="subarea">
+                <div class="inner-subarea">
+                    <label>Genero</label>
+                    <input id="genero" style="width: 100%;" value="{{jogo.genero}}" {{#jogo}}disabled class="disabled-input"{{/jogo}}/>
+                </div>
+                <div class="inner-subarea">
+                    <label>Subgênero</label>
+                    <input id="subgenero" style="width: 100%;" value="{{jogo.subgenero}}" {{#jogo}}disabled class="disabled-input"{{/jogo}}/>
+                </div>
+            </div>
+            <div class="subarea">
+                <div class="inner-subarea">
+                    <label>Desenvolvedora</label>
+                    <input id="desenvolvedora" style="width: 100%;" value="{{jogo.desenvolvedora}}" {{#jogo}}disabled class="disabled-input"{{/jogo}}/>
+                </div>
+                <div class="inner-subarea">
+                    <label>Distribuidora</label>
+                    <input id="distribuidora" style="width: 100%;" value="{{jogo.distribuidora}}" {{#jogo}}disabled class="disabled-input"{{/jogo}}/>
+                </div>
+            </div>
+            <label>Preço sugerido</label>
+            <input id="preco" value="{{jogo.preco}}" {{#jogo}}disabled class="disabled-input"{{/jogo}}/>
+
+            
+            <div class="subarea">
+                <input id="id" style="display: none;" value="{{jogo.id}}"/>
+                {{#jogo}}
+                <button id="editar">Editar</button>
+                <button id="salvar" style="display: none;">Salvar</button>
+                <button id="excluir" class="excluir" style="display: none;">Excluir</button>
+                {{/jogo}}
+                {{^jogo}}
+                <button id="cadastrar">Cadastrar</button>
+                {{/jogo}}
+            </div>
+            {{#jogo}}
+            <button id="cancelar" style="margin-top: 10px; display: none" >Cancelar</button>
+
+            <h1 class="secao-titulo">Analises</h1>
+            <div id="grid" class="main-grid">
+
+            </div> 
+            {{/jogo}}
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/sobre#tecnologias">Tecnologias</a></li>
+                <li><a href="/sobre#desenvolvedor">Desenvolvedores</a></li>
+                <li><a href="/sobre#contato">Contato</a></li>
+            </ul>
+            <span class="footer-infos">© GameLog 2023 • v0.10.0</span>
+        </div>
+    </footer>
+</body>
+    {{#jogo}}
+    <script src="/javascript/control/editarJogoControl.js" type="module"></script>
+    {{/jogo}}
+    {{^jogo}}
+    <script src="/javascript/control/jogoControl.js" type="module"></script>
+    {{/jogo}}
+</html>

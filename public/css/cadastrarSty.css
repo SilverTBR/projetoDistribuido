@@ -1,0 +1,18 @@
+h1{
+    font-weight:lighter;
+    color: #8f9ca7;
+}
+
+input{
+    margin-bottom: 15px;
+    width: 99%;
+}
+
+button{
+    width: 100%;
+}
+
+.aviso{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}

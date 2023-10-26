@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameLog - Index</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link href="css/geral.css" rel="stylesheet">
+    <link href="css/indexSty.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="/">
+           <img src="img/logo.png" class="logo">
+           <span class="header-title">GameLog</span> 
+        </a>
+
+    </header>
+    <main>
+        
+        <div class="aviso" id="aviso">
+            <p class="aviso-text" id="aviso-text">Email ou senha invalidos!</p>
+        </div>
+        <div class="text-index">
+            <p style="color: #8f9ca7; font-size: 50px; margin-bottom: 0;">BEM-VINDO</p>
+            <p style="color: #8f9ca7; font-size: 18px; margin-bottom: 0;">GameLog sua capsula do tempo do passado e futuro, colocando jogos que deseja salvar para jogar no futuro e jogos que já terminou juntamente de sua analise sobre os mesmos</p>     
+        </div>
+
+        <div class="login-div">
+            <input type="email" placeholder="Email" class="login-input" id="email">
+            <input type="password" placeholder="Senha" class="login-input" id="senha">
+            <button id="Logar">Login</button>
+        </div>
+        <div class="opcoes-link">
+            <a class="a-cadastro" href="/cadastro">Novo usuario? Se cadastre aqui!</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/sobre#tecnologias">Tecnologias</a></li>
+                <li><a href="/sobre#desenvolvedor">Desenvolvedores</a></li>
+                <li><a href="/sobre#contato">Contato</a></li>
+            </ul>
+            <span class="footer-infos">© GameLog 2023 • v0.10.0</span>
+        </div>
+    </footer> 
+</body>
+    <script src="javascript/control/usuarioControl.js" type="module"></script>
+</html>

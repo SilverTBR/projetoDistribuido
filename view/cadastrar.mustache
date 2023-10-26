@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameLog - Cadastro</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link href="css/geral.css" rel="stylesheet">
+    <link href="css/cadastrarSty.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+    <header>
+        <a class="header-logo" href="/">
+           <img src="img/logo.png" class="logo">
+           <span class="header-title">GameLog</span> 
+        </a>
+        
+    </header>
+    <main>
+        <div class="main-area">
+            <div class="aviso" id="aviso">
+                <p class="aviso-text" id="aviso-text">Dados de cadastro estão invalidos!</p>
+            </div>
+        <h1>Cadastro</h1>
+        <input placeholder="Nome" id="nome">
+        <input type="email" placeholder="Email" class="" id="email">
+        <input type="password" placeholder="Senha" class="" id="senha">
+        <input type="password" placeholder="Confirmar senha" class="" id="cSenha">
+        <button id="cadastrar">Cadastrar</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/sobre#tecnologias">Tecnologias</a></li>
+                <li><a href="/sobre#desenvolvedor">Desenvolvedores</a></li>
+                <li><a href="/sobre#contato">Contato</a></li>
+            </ul>
+            <span class="footer-infos">© GameLog 2023 • v0.10.0</span>
+        </div>
+    </footer> 
+</body>
+    <script src="javascript/control/usuarioControl.js" type="module"></script>
+</html>

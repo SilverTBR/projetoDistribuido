@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GameLog - Main</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <link href="/css/geral.css" rel="stylesheet">
+    <link href="/css/mainSty.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bdedc57966.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+    <header>
+        <a class="header-logo" href="/main">
+            <img src="/img/logo.png" class="logo">
+            <span class="header-title">GameLog</span>
+        </a>
+        <ul class="header-right">
+            <li><a href="/main/perfil" id="perfil"><i class="fa-solid fa-user" style="margin-right: 5px;"></i></a></li>
+            <li><a href="/main/jogos" id="jogos"><i class="fa-solid fa-plus" style="margin-right: 5px;"></i>Adicionar jogo</a></li>
+            <li><a href="/main/analise" id="jogos"><i class="fa-solid fa-pen" style="margin-right: 5px;"></i>Adcionar analise</a></li>            
+            <li><a href="/main/grafico" id="jogos"><i class="fa-solid fa-chart-simple" style="margin-right: 5px;"></i>Grafico</a></li>            
+            <li><a class="sair" href="/" id="jogos"><i class="fa-solid fa-right-from-bracket"></i>Sair</a></li>            
+        </ul>
+
+    </header>
+    <main>
+        <div id="div-order" class="grid-order">
+            <div id="order-nome"><p>Nome</p></div>
+            <div id="order-dev"><p>Desenvolvedora</p></div>
+            <div id="order-gen"><p>Genero</p></div>
+        </div>
+
+        <div id="grid" class="main-grid">
+
+        </div>
+        <div id="div-pags" class="grid-pags">
+ 
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/sobre#tecnologias">Tecnologias</a></li>
+                <li><a href="/sobre#desenvolvedor">Desenvolvedores</a></li>
+                <li><a href="/sobre#contato">Contato</a></li>
+            </ul>
+            <span class="footer-infos">© GameLog 2023 • v0.10.0</span>
+        </div>
+    </footer>
+</body>
+<script src="/javascript/control/mainControl.js" type="module"></script>
+
+</html>
