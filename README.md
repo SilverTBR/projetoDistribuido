@@ -43,7 +43,7 @@ docker run -d --name mysql-container  --network redegamelog -e  MYSQL_DATABASE=w
 
 # PASSO 3.3: CRIE O CONTAINER DO SISTEMA.
 
-Clique com o botão direito na pasta SISTEMA e abra o terminal. Após isso, execute o seguinte comando:
+Clique com o botão direito na pasta SISTEMA e abra o terminal, ou use cd SISTEMA. Após isso, execute o seguinte comando:
 
 <pre>
  docker build -t sistemagamelog .
@@ -59,7 +59,7 @@ Isso irá buildar o dockerfile que o sistema possui. Após ele terminar de reali
 
 # PASSO 3.4: CRIE O CONTAINER DO SERVIÇO.
 
-Clique com o botão direito na pasta SERVICO e abra no terminal. Após isso, execute o seguinte comando:
+Clique com o botão direito na pasta SERVICO e abra no terminal, ou use cd .. e depois cd SERVICO. Após isso, execute o seguinte comando:
 
 <pre>
  docker build -t servicogamelog .
