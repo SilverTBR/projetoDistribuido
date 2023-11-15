@@ -28,15 +28,60 @@ Essa etapa consiste em configurar o ambiente desenvolvido com o docker, e assim,
 Primeiramente é ncessário criar uma rede docker para realizar a comunicação de cada parte do sistema. Para isso, rode o seguinte comando, abrindo o terminal da pasta com os projetos:
 
 <pre>
-```docker
 docker network create redegamelog
-```
 </pre>
 
-OBS: redegamelog é o nome dado pela rede e pode ser substituido por qualquer outro nome.
 
-Se der certo é para aparecer a seguinte resposta:
-![rede](https://github.com/SilverTBR/projetoDistribuido/assets/111712600/e74f69ff-0b8a-4a25-82e4-2df15c886dfe)
+# PASSO 3.2: CRIE O CONTAINER DO MYSQL.
+Nesse projeto, foi utilizado o MySQL para o banco de dados, o comando abaixo está configurando para criar um banco de dados com o nome "web2" e a senha "123456".
+
+<pre>
+docker run -d --name mysql-container  --network redegamelog -e  MYSQL_DATABASE=web2 -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 mysql:latest
+</pre>
+
+![banco](https://github.com/SilverTBR/projetoDistribuido/assets/111712600/97d8bb04-4e00-4f83-8232-5256d71cb82f)
+
+# PASSO 3.3: CRIE O CONTAINER DO SISTEMA.
+
+Clique com o botão direito na pasta SISTEMA e abra o terminal. Após isso, execute o seguinte comando:
+
+<pre>
+ docker build -t sistemagamelog .
+</pre>
+
+![sistema a](https://github.com/SilverTBR/projetoDistribuido/assets/111712600/7174157e-96eb-49ed-a136-e11ce9fe9f47)
+
+Isso irá buildar o dockerfile que o sistema possui. Após ele terminar de realizar a criação da imagens, iremos criar um container na rede docker:
+
+<pre>
+ docker run -d --name sistema-container --network redegamelog -p 3000:3000 sistemagamelog
+</pre>
+
+# PASSO 3.4: CRIE O CONTAINER DO SERVIÇO.
+
+Clique com o botão direito na pasta SERVICO e abra no terminal. Após isso, execute o seguinte comando:
+
+<pre>
+ docker build -t servicogamelog .
+</pre>
+
+Isso irá buildar o dockerfile que o sistema possui. Após ele terminar de realizar a criação da imagens, iremos criar um container na rede docker:
+
+<pre>
+ docker run -d --name servico-container --network redegamelog -p 8080:8080 servicogamelog
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
