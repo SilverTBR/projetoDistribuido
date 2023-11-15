@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GameLog - Perfil</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <link href="/css/geral.css" rel="stylesheet">
+    <link href="/css/perfilSty.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bdedc57966.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+    <header>
+        <a class="header-logo" href="/main">
+            <img src="/img/logo.png" class="logo">
+            <span class="header-title">GameLog</span>
+        </a>
+        <ul class="header-right">
+            <li><a href="/main/perfil" id="perfil"><i class="fa-solid fa-user" style="margin-right: 5px;"></i></a></li>
+            <li><a href="/main/jogos" id="jogos"><i class="fa-solid fa-plus" style="margin-right: 5px;"></i>Adicionar jogo</a></li>
+            <li><a href="/main/analise" id="jogos"><i class="fa-solid fa-pen" style="margin-right: 5px;"></i>Adcionar analise</a></li>            
+            <li><a href="/main/grafico" id="jogos"><i class="fa-solid fa-chart-simple" style="margin-right: 5px;"></i>Grafico</a></li>            
+            <li><a class="sair" href="/" id="jogos"><i class="fa-solid fa-right-from-bracket"></i>Sair</a></li>            
+        </ul>
+
+    </header>
+    <main>
+        <div class="main-area">
+            <div class="aviso" id="aviso">
+                <p class="aviso-text" id="aviso-text">Dados invalidos!</p>
+            </div>
+            <h1 class="secao-titulo">Perfil</h1>
+            <label>Nome</label>
+            <input id="nome"/>
+            <label>Email</label>
+            <input id="email" style="margin-bottom: 0px;" disabled class="disabled-input"/>
+            <small>O email é unico e não pode ser alterado</small>
+            <div class="subarea">
+                <div class="inner-subarea">
+                    <label>Senha</label>
+                    <input id="senha" style="width: 100%;"/>
+                </div>
+                <div class="inner-subarea">
+                    <label>Confirmar senha</label>
+                    <input id="cSenha" style="width: 100%;" disabled class="disabled-input"/>
+                </div>
+            </div>
+            <div class="subarea">
+                <button id="salvar">Salvar</button>
+                <button id="excluir" class="excluir">Excluir</button>
+            </div>
+        </div>
+        <div id="notificao-container"></div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/sobre#tecnologias">Tecnologias</a></li>
+                <li><a href="/sobre#desenvolvedor">Desenvolvedores</a></li>
+                <li><a href="/sobre#contato">Contato</a></li>
+            </ul>
+            <span class="footer-infos">© GameLog 2023 • v0.10.0</span>
+        </div>
+    </footer>
+</body>
+    <script src="/javascript/control/perfilControl.js" type="module"></script>
+    <script src="/javascript/control/wsControl.js" type="module"></script>
+
+</html>

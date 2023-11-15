@@ -1,0 +1,60 @@
+input{
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.main-area{
+    width: 50%;
+    margin-top: 20px;
+}
+
+button{
+    width: 25%;
+}
+
+.excluir {
+    background-color: #ce2727;
+    border: 1px solid #ce2727;
+}
+
+.disabled-input{
+    background-color: #30394c57;
+    border: 1px solid #30394c57;
+    color: rgba(255, 255, 255, 0.562);
+}
+
+.main-grid{
+    width: 100%;
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 10px; 
+    grid-gap: 40px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.main-grid>article{
+    background-color: #30394c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40vh;
+    text-align: center;
+}
+
+.tituloCard{
+    color: #8f9ca7;
+    font-size: 15px;
+}
+
+.textCard{
+    width: 40vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
