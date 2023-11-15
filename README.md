@@ -36,7 +36,7 @@ docker network create redegamelog
 Nesse projeto, foi utilizado o MySQL para o banco de dados, o comando abaixo está configurando para criar um banco de dados com o nome "web2" e a senha "123456". A Porta está configuranda na 3306, caso aja conflitos de portas, pode ser alterado para outra porta. Para isso, é necessário alterar o port no código.
 
 <pre>
-docker run -d --name mysql-container  --network redegamelog -e  MYSQL_DATABASE=web2 -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 mysql:latest
+docker run -d --name mysql-container  --network redegamelog -e  MYSQL_DATABASE=web2 -e MYSQL_ROOT_PASSWORD=123456 -p 3307:3307 mysql:latest
 </pre>
 
 ![banco](https://github.com/SilverTBR/projetoDistribuido/assets/111712600/97d8bb04-4e00-4f83-8232-5256d71cb82f)
