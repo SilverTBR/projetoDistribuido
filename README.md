@@ -15,6 +15,11 @@ git clone https://github.com/SilverTBR/projetoDistribuido
 
 Esse repositório baixado contará com duas pastas, uma com o nome SERVICO e outro com o nome SISTEMA. A pasta SERVICO contém a parte de rastreamento de pedidos, e o SISTEMA contém o sistema de vendas desenvolvido.
 
+Após o clone ou download, é para a pastar estar parecida com isso:
+
+![pastas](https://github.com/SilverTBR/projetoDistribuido/assets/111712600/6cfe56f9-8134-43ef-b482-cc83eedde16d)
+
+
 # Passo 3: Configurar as imagens no DOCKER.
 
 Essa etapa consiste em configurar tudo o que é necessário para configurar o sistema e o serviço com o DOCKER e rodá-lo através dele. A aplicação em questão se comunica com um banco de dados SQL, dessa forma, é necessário no docker, também rodar uma imagem do SQL, nesse escopo, foi escolhido o MYSQL, banco SGBD utilizado tanto no serviço quando no sistema.
