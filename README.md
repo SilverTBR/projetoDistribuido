@@ -19,14 +19,25 @@ Após o clone ou download, é para a pastar estar parecida com isso:
 
 ![pastas](https://github.com/SilverTBR/projetoDistribuido/assets/111712600/6cfe56f9-8134-43ef-b482-cc83eedde16d)
 
-
 # Passo 3: Configurar as imagens no DOCKER.
 
-Essa etapa consiste em configurar tudo o que é necessário para configurar o sistema e o serviço com o DOCKER e rodá-lo através dele. A aplicação em questão se comunica com um banco de dados SQL, dessa forma, é necessário no docker, também rodar uma imagem do SQL, nesse escopo, foi escolhido o MYSQL, banco SGBD utilizado tanto no serviço quando no sistema.
+Essa etapa consiste em configurar o ambiente desenvolvido com o docker, e assim, realizar a comunicação entre eles. Para isso, é necessário criar uma imagem e container do SISTEMA, SERVICO e do Banco de Dados escolhido. Para realizar a comunicação entre as três plataformas, é necessário utilizar do Docker Network.
 
-Primeiramente, crie um docker network, esse network será responsável para fazer o banco, o sistema e o serviço conversarem entre si.
+# PASSO 3.1: CRIE O DOCKER NETWORK.
 
-# PASSO 3.1: Configurando o BANCO DE DADOS.
+Primeiramente é ncessário criar uma rede docker para realizar a comunicação de cada parte do sistema. Para isso, rode o seguinte comando, abrindo o terminal da pasta com os projetos:
+
+<pre>
+```docker
+docker network create redegamelog
+```
+</pre>
+
+OBS: redegamelog é o nome dado pela rede e pode ser substituido por qualquer outro nome.
+
+Se der certo é para aparecer a seguinte resposta:
+![rede](https://github.com/SilverTBR/projetoDistribuido/assets/111712600/e74f69ff-0b8a-4a25-82e4-2df15c886dfe)
+
 
 
 
