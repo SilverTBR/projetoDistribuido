@@ -71,10 +71,13 @@ Isso irá buildar o dockerfile que o sistema possui. Após ele terminar de reali
  docker run -d --name servico-container --network redegamelog -p 8080:8080 servicogamelog
 </pre>
 
+# PASSO 4: ENTRAR NO SISTEMA.
 
+Caso não tenha dado nenhum problema, abra o navegador pelo localhost mesmo:
 
+http://localhost:3000/
 
-
+![sistema ab](https://github.com/SilverTBR/projetoDistribuido/assets/111712600/fa74f489-a487-41c5-a5e9-f3d4ba12ab70)
 
 
 
